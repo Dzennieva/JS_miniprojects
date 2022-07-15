@@ -10,15 +10,44 @@ body {
     font-family: "Montserrat", sans-serif;
     color: white;
     background-image: url('./image/bground.jpg');
-    height: 100vh;
+    min-height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white;  */
+    justify-content: center;
+    align-items: center;
 }
-
-.countdwn-container {
+h1 {
+    font: 4rem;
+    text-align: center;
+    margin-top: -10rem;
+}
+.countdown-container {
     width: 80%;
     margin: 0 auto;
     /* border: 1px solid red;  */
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-text {
+    font-size: 7rem;
+    line-height: 1;
+    margin: 2rem;
+    /* border: 1px solid red;  */
+
+}
+
+.countdown-desc {
+    text-align: center;
+    margin-top: 2rem;
+    /* border: 1px solid red;  */
+}
+
+.countdown-desc span{
+  font-size: 1.5rem
 }
