@@ -11,12 +11,11 @@ body {
     color: white;
     background-image: url('./image/bground.jpg');
     min-height: 100vh;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid white;  */
     justify-content: center;
     align-items: center;
 }
@@ -28,7 +27,6 @@ h1 {
 .countdown-container {
     width: 80%;
     margin: 0 auto;
-    /* border: 1px solid red;  */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,8 +36,6 @@ h1 {
     font-size: 7rem;
     line-height: 1;
     margin: 2rem;
-    /* border: 1px solid red;  */
-
 }
 
 .countdown-desc {
