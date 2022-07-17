@@ -1,4 +1,3 @@
-const days = document.getElementById('days');
 const hours = document.getElementById('hours');
 const minutes = document.getElementById('mins');
 const seconds = document.getElementById('secs');
