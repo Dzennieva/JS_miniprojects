@@ -3,28 +3,35 @@ const hours = document.getElementById('hours');
 const minutes = document.getElementById('mins');
 const seconds = document.getElementById('secs');
 
-con
+// get countdown date
 
-function countDown() {
-    const currentDay = new Date();
-    let h = currentDay.getHours();
-    let m = currentDay.getMinutes();
-    let s = currentDay.getSeconds();
+const getNewYear = new Date("Jan 1, 2023");
 
-    h = addZero(h);
-    m = addZero(m);
-    s = addZero(s);
+// Update the count down every 1 second
+const countDown = setInterval(() => {
 
-    hours.innerHTML = h;
-    minutes.innerHTML = m;
-    seconds.innerHTML = s;
-    setTimeout(getTime, 1000);
-}
+// Get today's date and time
+const currentDay = new Date().getTime();
 
-getTime();
+// Find the difference between now and the count down date
+let difference = (getNewYear - currentDay);
 
-function addZero(i) {
-    if(i < 10) {i = '0' + i};
-    return i;
-}
+// Time calculations for days, hours, minutes and seconds
+let dys = Math.floor(difference / (1000 * 60 * 60 *24));
+let hrs = Math.floor(difference % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+let mins = Math.floor(difference % (1000 * 60 * 60) / (1000 * 60));
+let secs = Math.floor(difference % (1000 * 60) / 1000);
+
+days.innerHTML = dys;
+hours.innerHTML = hrs;
+minutes.innerHTML = mins;
+seconds.innerHTML = secs;
+
+// If the count down is over, write some text 
+if (difference < 0) {
+    clearInterval(countDown);
+    document.getElementById("demo").innerHTML = "Time up";
+  }
+}, 1000);
+
 
